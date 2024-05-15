@@ -167,7 +167,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->isActive;
     }
 
-    public function setActive(bool $isActive): static
+    public function setIsActive(bool $isActive): static
     {
         $this->isActive = $isActive;
 
@@ -214,7 +214,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->isStudent;
     }
 
-    public function setStudent(bool $isStudent): static
+    public function setIsStudent(bool $isStudent): static
     {
         $this->isStudent = $isStudent;
 
@@ -226,7 +226,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->isVerified;
     }
 
-    public function setVerified(bool $isVerified): static
+    public function setIsVerified(bool $isVerified): static
     {
         $this->isVerified = $isVerified;
 

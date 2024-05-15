@@ -1,0 +1,15 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+
+{% block content_header %}
+    <h1>Import Users</h1>
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button type="submit" class="btn btn-primary">Import</button>
+    {{ form_end(form) }}
+    </div>  
+{% endblock %}

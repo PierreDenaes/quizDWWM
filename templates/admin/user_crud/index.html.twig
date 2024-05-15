@@ -1,0 +1,16 @@
+{# templates/admin/user_crud/index.html.twig #}
+
+{% extends '@EasyAdmin/crud/index.html.twig' %}
+
+{% block global_actions %}
+    {{ parent() }}
+    {# Custom 'Import Users' button #}
+    <a class="btn btn-primary ms-1" href="{{ path('admin_import_users') }}">
+        {{ 'Import Users'|trans({}, 'EasyAdminBundle') }}
+    </a>
+{% endblock %}
+
+{% block configured_javascripts %}
+    {{ parent() }}
+    {# Ajouter votre JavaScript personnalisé ici, si nécessaire #}
+{% endblock %}

@@ -48,6 +48,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     private $plainPassword;
 
+    #[ORM\Column]
+    private ?bool $isStudent = null;
+
     public function __construct()
     {
         $this->isActive = true;
@@ -198,6 +201,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         $this->plainPassword = $plainPassword;
         
+        return $this;
+    }
+
+    public function isStudent(): ?bool
+    {
+        return $this->isStudent;
+    }
+
+    public function setStudent(bool $isStudent): static
+    {
+        $this->isStudent = $isStudent;
+
         return $this;
     }
 }
